@@ -6,13 +6,17 @@
     <title>KarFind - Discover Local Eateries</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
+    <img src="/img/background.jpg" style="height: auto; width: 100%; z-index: -1; left: 0; top: 0; position: absolute;">
+
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #223525;">
         <div class="container">
-            <a class="navbar-brand" href="/index.html">KarFind</a>
+            <img src="/img/karfind.png" style="height: 50px; width: auto; margin-right: 8px;">
+            <a class="navbar-brand" href="/index.html" style="color: #F89A1F; font-weight: bold;">KarFind</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,56 +54,95 @@
                 </select>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary w-100" onclick="filterEateries()">Apply</button>
+                <button class="btn btn-primary w-100" onclick="filterEateries()" style="background: #F89A1F; border-width: 0px; color: #000000;">Apply</button>
             </div>
         </div>
     </div>
 
     <!-- Eateries List -->
-    <div class="container mt-5">
-        <div class="row" id="eateriesList">
-            <!-- Sample Eatery 1 -->
-            <div class="col-md-4 eatery-card" data-cuisine="Filipino" data-price="₱">
-                <div class="card">
-                    <img src="/img/eatery1.jpg" class="card-img-top" alt="Eatery 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Lola's Lutong Bahay</h5>
-                        <p class="card-text">📍 Sta. Rosa, Laguna | ⭐ 4.5</p>
-                        <p class="text-muted">₱ | Filipino Cuisine</p>
-                        <a href="#" class="btn btn-primary">View More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sample Eatery 2 -->
-            <div class="col-md-4 eatery-card" data-cuisine="Fusion" data-price="₱₱">
-                <div class="card">
-                    <img src="/img/eatery2.png" class="card-img-top" alt="Eatery 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Kusina ni Aling Maria</h5>
-                        <p class="card-text">📍 Balibago, Sta. Rosa | ⭐ 4.7</p>
-                        <p class="text-muted">₱₱ | Fusion Cuisine</p>
-                        <a href="#" class="btn btn-primary">View More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sample Eatery 3 -->
-            <div class="col-md-4 eatery-card" data-cuisine="Dessert" data-price="₱₱₱">
-                <div class="card">
-                    <img src="/img/eatery3.jpg" class="card-img-top" alt="Eatery 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Bahay Kubo Meals</h5>
-                        <p class="card-text">📍 Tagapo, Sta. Rosa | ⭐ 4.3</p>
-                        <p class="text-muted">₱₱₱ | Dessert</p>
-                        <a href="#" class="btn btn-primary">View More</a>
-                    </div>
+<div class="container mt-5">
+    <div class="row eateries-container" id="eateriesList">
+        <!-- Eatery 1 -->
+        <div class="col-md-4 eatery-card" data-cuisine="Filipino" data-price="₱">
+            <div class="card" style="height: 400px; margin: 10px">
+                <img src="/img/eatery1.jpg" class="card-img-top" style="width: 100%; height: 200px;" alt="Eatery 1">
+                <div class="card-body">
+                    <h5 class="card-title">Lola's Lutong Bahay</h5>
+                    <p class="card-text"><i class="bx bxs-map link-icon"></i> Sta. Rosa, Laguna | ⭐ 4.5</p>
+                    <p class="text-muted">₱ | Filipino Cuisine</p>
+                    <a href="eatery1.html" class="btn btn-primary" style="background-color: #223525; border-width: 0px;">View More</a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
+        <!-- Eatery 2 -->
+        <div class="col-md-4 eatery-card" data-cuisine="Fusion" data-price="₱₱">
+            <div class="card" style="height: 400px; margin: 10px">
+                <img src="/img/eatery2.png" class="card-img-top" style="width: 100%; height: 200px;" alt="Eatery 2">
+                <div class="card-body">
+                    <h5 class="card-title">Kusina ni Aling Maria</h5>
+                    <p class="card-text"><i class="bx bxs-map link-icon"></i> Balibago, Sta. Rosa | ⭐ 4.7</p>
+                    <p class="text-muted">₱₱ | Fusion Cuisine</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #223525; border-width: 0px;">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eatery 3 -->
+        <div class="col-md-4 eatery-card" data-cuisine="Dessert" data-price="₱₱₱">
+            <div class="card" style="height: 400px; margin: 10px">
+                <img src="/img/eatery3.jpg" class="card-img-top" style="width: 100%; height: 200px;" alt="Eatery 3">
+                <div class="card-body">
+                    <h5 class="card-title">Bahay Kubo Meals</h5>
+                    <p class="card-text"><i class="bx bxs-map link-icon"></i> Tagapo, Sta. Rosa | ⭐ 4.3</p>
+                    <p class="text-muted">₱₱₱ | Dessert</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #223525; border-width: 0px;">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eatery 4 -->
+        <div class="col-md-4 eatery-card" data-cuisine="Filipino" data-price="₱₱">
+            <div class="card" style="height: 400px; margin: 10px">
+                <img src="/img/eatery4.jpg" class="card-img-top" style="width: 100%; height: 200px;" alt="Eatery 4">
+                <div class="card-body">
+                    <h5 class="card-title">Tita's Carinderia</h5>
+                    <p class="card-text"><i class="bx bxs-map link-icon"></i> Market Area, Sta. Rosa | ⭐ 4.2</p>
+                    <p class="text-muted">₱₱ | Filipino Cuisine</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #223525; border-width: 0px;">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eatery 5 -->
+        <div class="col-md-4 eatery-card" data-cuisine="Fusion" data-price="₱₱₱">
+            <div class="card" style="height: 400px; margin: 10px">
+                <img src="/img/eatery5.jpg" class="photo-container" style="width: 100%; height: 200px;" alt="Eatery 5">
+                <div class="card-body">
+                    <h5 class="card-title">Chef's Secret Spot</h5>
+                    <p class="card-text"><i class="bx bxs-map link-icon"></i> Balibago, Sta. Rosa | ⭐ 4.8</p>
+                    <p class="text-muted">₱₱₱ | Fusion Cuisine</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #223525; border-width: 0px;">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 eatery-card" data-cuisine="Dessert" data-price="₱₱₱">
+            <div class="card" style="height: 400px; margin: 10px">
+                <img src="/img/eatery6.jpg" class="card-img-top" style="width: 100%; height: 200px;" alt="Eatery 6">
+                <div class="card-body">
+                    <h5 class="card-title">Halo-Halo Delight</h5>
+                    <p class="card-text"><i class="bx bxs-map link-icon"></i> Nuvali, Sta. Rosa | ⭐ 4.8</p>
+                    <p class="text-muted">₱₱₱ | Dessert</p>
+                    <a href="#" class="btn btn-primary" style="background-color: #223525; border-width: 0px;">View More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>KarFind &copy; 2025 | Discover the Best Carinderias in Sta. Rosa</p>
     </footer>
