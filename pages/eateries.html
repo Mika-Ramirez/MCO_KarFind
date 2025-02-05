@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarFind - Discover Local Eateries</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">KarFind</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="eateries.html">Discover Eateries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search and Filter Section -->
+    <div class="container mt-4">
+        <h2 class="text-center">Find the Best Carinderias in Sta. Rosa</h2>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by name...">
+            </div>
+            <div class="col-md-3">
+                <select id="filterCuisine" class="form-select">
+                    <option value="">All Cuisines</option>
+                    <option value="Filipino">Filipino</option>
+                    <option value="Fusion">Fusion</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="filterPrice" class="form-select">
+                    <option value="">All Price Ranges</option>
+                    <option value="₱">₱ (Budget)</option>
+                    <option value="₱₱">₱₱ (Mid-range)</option>
+                    <option value="₱₱₱">₱₱₱ (Expensive)</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" onclick="filterEateries()">Apply</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Eateries List -->
+    <div class="container mt-5">
+        <div class="row" id="eateriesList">
+            <!-- Sample Eatery 1 -->
+            <div class="col-md-4 eatery-card" data-cuisine="Filipino" data-price="₱">
+                <div class="card">
+                    <img src="/img/eatery1.jpg" class="card-img-top" alt="Eatery 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Lola's Lutong Bahay</h5>
+                        <p class="card-text">📍 Sta. Rosa, Laguna | ⭐ 4.5</p>
+                        <p class="text-muted">₱ | Filipino Cuisine</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Eatery 2 -->
+            <div class="col-md-4 eatery-card" data-cuisine="Fusion" data-price="₱₱">
+                <div class="card">
+                    <img src="/img/eatery2.png" class="card-img-top" alt="Eatery 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kusina ni Aling Maria</h5>
+                        <p class="card-text">📍 Balibago, Sta. Rosa | ⭐ 4.7</p>
+                        <p class="text-muted">₱₱ | Fusion Cuisine</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Eatery 3 -->
+            <div class="col-md-4 eatery-card" data-cuisine="Dessert" data-price="₱₱₱">
+                <div class="card">
+                    <img src="/img/eatery3.jpg" class="card-img-top" alt="Eatery 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Bahay Kubo Meals</h5>
+                        <p class="card-text">📍 Tagapo, Sta. Rosa | ⭐ 4.3</p>
+                        <p class="text-muted">₱₱₱ | Dessert</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>KarFind &copy; 2025 | Discover the Best Carinderias in Sta. Rosa</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
